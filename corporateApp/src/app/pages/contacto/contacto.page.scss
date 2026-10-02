@@ -1,0 +1,40 @@
+.contacto-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.form-card,
+.persisted-card {
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.custom-item {
+  --background: var(--ion-color-step-50, #f8fafc);
+  --border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--ion-color-step-150, #e2e8f0);
+}
+
+.submit-btn {
+  margin-top: 1.25rem;
+  --border-radius: 10px;
+  font-weight: 600;
+}
+
+.success-alert {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.persisted-card {
+  margin-top: 1.5rem;
+  border-left: 4px solid var(--ion-color-secondary, #3dc2ff);
+}
+
+.persisted-title {
+  font-size: 1.05rem;
+  color: var(--ion-color-secondary-shade, #0c82ba);
+}

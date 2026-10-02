@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contacto-container">
+    <ion-card class="form-card">
+      <ion-card-header>
+        <ion-card-title>Envíanos un mensaje</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Punto 15: HTML Formulario -->
+        <ion-item class="custom-item">
+          <ion-input
+            [(ngModel)]="correo"
+            placeholder="Correo"
+            type="email">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="custom-item">
+          <ion-textarea
+            [(ngModel)]="mensaje"
+            placeholder="Mensaje"
+            [autoGrow]="true"
+            rows="4">
+          </ion-textarea>
+        </ion-item>
+
+        <ion-button expand="block" (click)="enviar()" class="submit-btn">
+          Enviar
+        </ion-button>
+
+        <ion-text color="success" *ngIf="enviado">
+          <p class="success-alert">
+            ✓ ¡Mensaje guardado correctamente en almacenamiento local!
+          </p>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Punto 16: Comprobación de persistencia local (@capacitor/preferences) -->
+    <ion-card class="persisted-card" *ngIf="ultimoMensaje">
+      <ion-card-header>
+        <ion-card-title class="persisted-title">
+          💾 Último mensaje en persistencia (@capacitor/preferences)
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Correo guardado:</strong> {{ ultimoMensaje.correo }}</p>
+        <p><strong>Mensaje guardado:</strong> {{ ultimoMensaje.mensaje }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

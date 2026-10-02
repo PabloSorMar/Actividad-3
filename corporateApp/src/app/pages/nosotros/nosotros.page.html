@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nosotros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="nosotros-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Nuestra empresa
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="company-desc">
+          Empresa especializada en soluciones basadas en Angular, Ionic y Node.js.
+        </p>
+
+        <div class="distance-box">
+          <p class="distance-text">
+            Distancia a nuestras oficinas:
+            <span class="distance-badge">{{ distancia }} km</span>
+          </p>
+
+          <p class="office-address">
+            📍 Sede Central: Calle Arcos de Jalón 18, Madrid
+          </p>
+
+          <div *ngIf="cargando" class="status-indicator">
+            <ion-spinner name="crescent"></ion-spinner>
+            <ion-note>Calculando tu ubicación GPS...</ion-note>
+          </div>
+
+          <div *ngIf="userCoords" class="coords-info">
+            <p><strong>Tu latitud:</strong> {{ userCoords.latitude | number:'1.4-4' }}</p>
+            <p><strong>Tu longitud:</strong> {{ userCoords.longitude | number:'1.4-4' }}</p>
+          </div>
+
+          <div *ngIf="errorMsg" class="error-notice">
+            <ion-note color="warning">{{ errorMsg }}</ion-note>
+            <br>
+            <ion-button size="small" fill="outline" (click)="obtenerUbicacionYCalcular()" class="retry-btn">
+              Reintentar detección GPS
+            </ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

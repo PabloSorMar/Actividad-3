@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Corporate App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Punto 5: Menú principal horizontal -->
+  <ion-segment value="" [scrollable]="true">
+    <ion-segment-button routerLink="/productos" value="productos">
+      <ion-label>Productos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button routerLink="/nosotros" value="nosotros">
+      <ion-label>Nosotros</ion-label>
+    </ion-segment-button>
+    <ion-segment-button routerLink="/contacto" value="contacto">
+      <ion-label>Contacto</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="welcome-container">
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-subtitle>Panel Corporativo</ion-card-subtitle>
+        <ion-card-title>Bienvenido a Corporate App</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Aplicación corporativa desarrollada con <strong>Ionic</strong>, <strong>Angular Standalone</strong> y <strong>Capacitor</strong>.
+        </p>
+        <p class="guide-text">
+          Selecciona una sección en el menú superior o explora las opciones rápidas:
+        </p>
+
+        <div class="quick-links">
+          <ion-button expand="block" fill="outline" routerLink="/productos">
+            Ver Catálogo de Productos
+          </ion-button>
+          <ion-button expand="block" fill="outline" routerLink="/nosotros">
+            Sobre Nosotros y Ubicación
+          </ion-button>
+          <ion-button expand="block" fill="outline" routerLink="/contacto">
+            Formulario de Contacto
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

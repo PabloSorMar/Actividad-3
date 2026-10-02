@@ -1,0 +1,74 @@
+.nosotros-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+ion-card {
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.company-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ion-text-color, #2d3748);
+  margin-bottom: 1.5rem;
+}
+
+.distance-box {
+  background: var(--ion-color-step-50, #f8fafc);
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--ion-color-step-150, #e2e8f0);
+}
+
+.distance-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.distance-badge {
+  background-color: var(--ion-color-primary, #3880ff);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+
+.office-address {
+  color: var(--ion-color-step-600, #718096);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.coords-info {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--ion-color-step-200, #cbd5e1);
+  font-size: 0.9rem;
+  color: var(--ion-color-step-700, #475569);
+
+  p {
+    margin: 4px 0;
+  }
+}
+
+.error-notice {
+  margin-top: 0.75rem;
+}
+
+.retry-btn {
+  margin-top: 0.5rem;
+}
